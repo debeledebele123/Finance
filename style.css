@@ -1,0 +1,14 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1, h2 { color: #333; }
+.stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.card { border-radius: 10px; padding: 20px; width: 180px; color: #fff; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.card.total { background-color: #007bff; }
+.card.paid { background-color: #28a745; }
+.card.unpaid { background-color: #dc3545; }
+.card.classes { background-color: #17a2b8; }
+.quick-links { margin-bottom: 30px; }
+.quick-links li { margin-bottom: 10px; }
+.quick-links a { text-decoration: none; color: #007bff; font-weight: bold; }
+.quick-links a:hover { text-decoration: underline; }
+.chart-container { width: 300px; height: 300px; margin: 0 auto; margin-bottom: 50px; }
+.chart-container-bar { width: 600px; height: 400px; margin: 0 auto; margin-bottom: 50px; }
