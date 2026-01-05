@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard - School System Finance</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Finance Dashboard - School System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Minimal CSS inline to ensure GitHub Pages renders properly */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        .stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+        .card { border-radius: 10px; padding: 20px; width: 180px; color: #fff; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .card.total { background-color: #007bff; }
+        .card.paid { background-color: #28a745; }
+        .card.unpaid { background-color: #dc3545; }
+        .card.classes { background-color: #17a2b8; }
+        .quick-links { margin-bottom: 30px; }
+        .quick-links li { margin-bottom: 10px; }
+        .quick-links a { text-decoration: none; color: #007bff; font-weight: bold; }
+        .quick-links a:hover { text-decoration: underline; }
+        .chart-container { width: 300px; height: 300px; margin: 0 auto; margin-bottom: 50px; }
+        .chart-container-bar { width: 600px; height: 400px; margin: 0 auto; margin-bottom: 50px; }
+    </style>
 </head>
 <body>
     <h1>School System Finance Dashboard</h1>
 
+    <!-- Statistic Cards -->
     <div class="stats">
         <div class="card total">
             <h3>Total Students</h3>
@@ -27,6 +46,7 @@
         </div>
     </div>
 
+    <!-- Quick Links -->
     <h2>Quick Links</h2>
     <ul class="quick-links">
         <li><a href="#">Students</a></li>
@@ -34,11 +54,13 @@
         <li><a href="#">Health</a></li>
     </ul>
 
+    <!-- Doughnut Chart -->
     <h2>Payments Overview</h2>
     <div class="chart-container">
         <canvas id="paymentsChart"></canvas>
     </div>
 
+    <!-- Bar Chart -->
     <h2>Payments Per Class</h2>
     <div class="chart-container-bar">
         <canvas id="classPaymentsChart"></canvas>
@@ -52,7 +74,7 @@
             data: {
                 labels: ['Paid', 'Unpaid'],
                 datasets: [{
-                    data: [35, 15],  // Sample numbers
+                    data: [35, 15],  // Static numbers
                     backgroundColor: ['#28a745', '#dc3545'],
                     borderColor: ['#fff', '#fff'],
                     borderWidth: 1
